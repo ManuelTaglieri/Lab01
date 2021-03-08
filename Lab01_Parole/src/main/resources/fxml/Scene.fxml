@@ -28,6 +28,7 @@
                </children>
             </HBox>
             <TextArea fx:id="txtResult" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+            <TextField fx:id="txtTime" editable="false" promptText="Tempo impiegato (ns)" />
          </children>
       </VBox>
    </center>
