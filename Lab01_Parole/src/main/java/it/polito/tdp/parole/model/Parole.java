@@ -22,5 +22,9 @@ public class Parole {
 	public void reset() {
 		this.parole.clear();
 	}
+	
+	public void cancella(String s) {
+		this.parole.remove(s);
+	}
 
 }
