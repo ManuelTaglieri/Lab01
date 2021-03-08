@@ -1,6 +1,6 @@
 package it.polito.tdp.parole;
 
-import it.polito.tdp.parole.model.Parole;
+import it.polito.tdp.parole.model.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
