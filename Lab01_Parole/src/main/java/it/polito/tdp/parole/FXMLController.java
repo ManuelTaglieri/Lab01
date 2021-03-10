@@ -42,34 +42,35 @@ public class FXMLController {
     void doInsert(ActionEvent event) {
     	long startTime = System.nanoTime();
     	elenco.addParola(txtParola.getText());
+    	long fine = System.nanoTime() - startTime;
+    	txtTime.setText(Long.toString(fine));
     	txtResult.clear();
     	for (String s : elenco.getElenco()) {
     		txtResult.appendText(s + "\n");
     	}
-    	long fine = System.nanoTime() - startTime;
-    	txtTime.setText(Long.toString(fine));
+    	txtParola.clear();
     }
 
     @FXML
     void doReset(ActionEvent event) {
     	long startTime = System.nanoTime();
     	elenco.reset();
-    	txtResult.clear();
-    	txtParola.clear();
     	long fine = System.nanoTime() - startTime;
     	txtTime.setText(Long.toString(fine));
+    	txtResult.clear();
+    	txtParola.clear();
     }
     
     @FXML
     void doCancella(ActionEvent event) {
     	long startTime = System.nanoTime();
-    	elenco.cancella(txtParola.getText());
+    	elenco.cancella(txtResult.getSelectedText());
+    	long fine = System.nanoTime() - startTime;
+    	txtTime.setText(Long.toString(fine));
     	txtResult.clear();
     	for (String s : elenco.getElenco()) {
     		txtResult.appendText(s + "\n");
     	}
-    	long fine = System.nanoTime() - startTime;
-    	txtTime.setText(Long.toString(fine));
     }
 
     @FXML
